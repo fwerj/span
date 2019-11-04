@@ -1,5 +1,5 @@
 Command line tool to measure the short term memory on linux system.
-# Typical usage:
+### Typical usage:
 
 ```bash
 $ seq 0 9 | span show; span check
