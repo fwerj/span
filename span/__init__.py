@@ -48,6 +48,8 @@ def _putstate(state):
 
 
 def show(start=3):
+    """ Show some letters from the alphabet read from stdin.
+    The number of letters depends on previous invocation of function"""
     state = _getstate()
     alphabet = "".join(sys.stdin).split()
     if (
@@ -81,6 +83,8 @@ def show(start=3):
 
 
 def forward():
+    """Prompt to enter the letters from show invocation in forward order.
+    Check for correctness and make record in history file."""
     state = _getstate()
     if "answer" not in state or state["checked"]:
         raise RuntimeError("No recorded tests. Run 'show' first.")
@@ -120,6 +124,7 @@ check = forward
 
 
 def new():
+    """ Drop caches of previous tests and next show invocation will start new test"""
     state = _getstate()
     state["drop"] = True
     _putstate(state)
