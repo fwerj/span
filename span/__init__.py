@@ -46,7 +46,7 @@ def _getstate():
         with open(STATE_FILE, "r") as fp:
             return collections.defaultdict(dict, toml.load(fp))
     except FileNotFoundError:
-        return defaultdict(dict)
+        return collections.defaultdict(dict)
 
 
 def _putstate(state):
