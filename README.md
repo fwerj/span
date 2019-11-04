@@ -3,7 +3,7 @@ Command line tool to measure the short term memory on linux system.
 
 ```bash
 $ seq 0 9 | span show; span check
-<span style="color:green">New test</span>
+![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `New test`
 808
 Right: 3
 $ seq 0 9 | span show; span check
