@@ -80,7 +80,7 @@ def show(start=3):
             index = random.randrange(len(alphabet))
         else:
             tmp = random.randrange(len(alphabet) - 1)
-            index = tmp + 1 if tmp >= index else 0
+            index = tmp + (1 if tmp >= index else 0)
         answer.append(alphabet[index])
         print("\r" * 20 + answer[-1], end="")
         time.sleep(SLEEP_TIME)
